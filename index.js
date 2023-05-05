@@ -16,4 +16,8 @@ app.get('*', (req, res) => {
   res.render('error404')
 })
 
+app.get('./edit', (req, res) => {
+  res.render('Edit')
+})
+
 app.listen(process.env.PORT, console.log(`listening on port 3000`))
