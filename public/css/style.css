@@ -2,3 +2,32 @@ h1 {
   text-align: center;
   color: #008000;
 }
+
+.col-sm {
+  width: 200px;
+  height: 150px;
+}
+
+/*#rest1 {
+  width: 200px;
+  height: 150px;
+  text-align: center;
+}*/
+
+#burger {
+  height: 150px;
+  width: 200px;
+}
+
+#img1 {
+  text-align: center;
+}
+
+#img404 {
+  height: 150px;
+  width: 200px;
+}
+
+#img2 {
+  text-align: center;
+}
