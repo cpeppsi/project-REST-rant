@@ -3,31 +3,8 @@ h1 {
   color: #008000;
 }
 
-.col-sm {
-  width: 200px;
-  height: 150px;
-}
-
-/*#rest1 {
-  width: 200px;
-  height: 150px;
-  text-align: center;
+/*img {
+  min-width: 0;
+  width: 100%;
+  height: auto;
 }*/
-
-#burger {
-  height: 150px;
-  width: 200px;
-}
-
-#img1 {
-  text-align: center;
-}
-
-#img404 {
-  height: 150px;
-  width: 200px;
-}
-
-#img2 {
-  text-align: center;
-}
