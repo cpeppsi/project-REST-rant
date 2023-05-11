@@ -23,7 +23,8 @@ router.get('/new', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-  res.send(console.log('id'))
+  const { places } = req.params
+  res.render('places')
 })
 
 module.exports = router

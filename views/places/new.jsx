@@ -5,7 +5,9 @@ function new_Form() {
   return (
     <Def>
       <main>
-        <h1>Add new place</h1>
+        <div className="col-sm-6">
+          <h1>Add new place</h1>
+        </div>
       </main>
     </Def>
   )
