@@ -1,26 +1,27 @@
 const router = require('express').Router()
+const places = require('../models/places.js')
 
 router.get('/', (req, res) => {
-  let places = [{
-    name: 'H-Thai-ML',
-    city: 'Seattle',
-    state: 'WA',
-    cuisines: 'Thai, Pan-Asian',
-    pic: '/images/restraunt1.jpg'
-  }, {
-    name: 'Coding Cat Cafe',
-    city: 'Phoenix',
-    state: 'AZ',
-    cuisines: 'Coffee, Bakery',
-    pic: '/images/restraunt2.jpg'
-  }]
-  
   res.render('places/index', { places })
 })
 
 router.post('/', (req, res) => {
-  console.log(req.body)
-  res.send('POST /places')
+  if (!req.body.pic) {
+    //Default image
+    req.body.pic = '/images/restraunt2.jpg'
+  }
+  
+  if (!req.body.city) {
+    //Default city
+    req.body.city = 'SomewhereVille'
+  }
+
+  if (!req.body.state) {
+    //Default state
+    req.body.state = 'United States'
+  }
+  places.push(req.body)
+  res.redirect('/places')
 })
 
 router.get('/new', (req, res) => {
