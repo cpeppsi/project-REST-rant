@@ -22,9 +22,13 @@ router.get('/new', (req, res) => {
   res.render('places/new')
 })
 
-router.get('/:id', (req, res) => {
+router.get('/places/:id', (req, res) => {
   const { places } = req.params
   res.render('places')
+})
+
+router.post('/', (req, res) => {
+  if (req.body.pic === "") { req.body.pic=undefined }
 })
 
 module.exports = router
