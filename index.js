@@ -21,7 +21,7 @@ app.get('*', (req, res) => {
 })
 
 // Listen for Connections
-app.listen(process.env.PORT, console.log(`listening on port 3000`))
+app.listen(process.env.PORT, console.log(`listening on port ${process.env.PORT}`))
 
 
 // Photo by <a href="https://unsplash.com/@finnwhelen?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Finn Whelen</a> on <a href="https://unsplash.com/s/photos/restraunt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

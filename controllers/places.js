@@ -18,17 +18,17 @@ router.get('/', (req, res) => {
   res.render('places/index', { places })
 })
 
+router.post('/', (req, res) => {
+  res.send('POST /places')
+})
+
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
 
-router.get('/places/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   const { places } = req.params
   res.render('places')
-})
-
-router.post('/', (req, res) => {
-  if (req.body.pic === "") { req.body.pic=undefined }
 })
 
 module.exports = router
