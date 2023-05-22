@@ -37,13 +37,21 @@ router.get('/:id', (req, res) => {
     res.render('error404')
   }
   else {
-    res.render('places/show', { place: places[id] })
+    res.render('places/show', { place: places[id], id })
   }
 })
 
 router.get('/:id', (req, res) => {
   const { places } = req.params
   res.render('places')
+})
+
+router.delete(':id', (req, res) => {
+  
+})
+
+router.get('/:id/edit', (req, res) => {
+  res.send('Edit page coming soon')
 })
 
 module.exports = router
