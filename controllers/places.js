@@ -47,7 +47,32 @@ router.get('/:id', (req, res) => {
 })
 
 router.put('/:id', (req, res) => {
-  res.send('POST /Edit stub')
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+    res.render('error404')
+  }
+  else if (!places[id]) {
+    res.render('error404')
+  }
+  else {
+    if (!req.body.pic) {
+      //Default image
+      req.body.pic = '/images/restraunt2.jpg'
+    }
+    
+    if (!req.body.city) {
+      //Default city
+      req.body.city = 'SomewhereVille'
+    }
+  
+    if (!req.body.state) {
+      //Default state
+      req.body.state = 'United States'
+    }
+
+    places[id] = req.body
+    res.redirect(`/places/${id}`)
+  }
 })
 
 router.delete('/:id', (req, res) => {
